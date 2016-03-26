@@ -7,6 +7,11 @@ import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
 
+/**
+ * Handler for whenever a keyboard key is pressed
+ * @author Majikguy
+ *
+ */
 public class EventHandlerKeyInput {
 
 	@SubscribeEvent

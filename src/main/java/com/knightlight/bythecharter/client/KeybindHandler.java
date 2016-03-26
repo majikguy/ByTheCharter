@@ -5,6 +5,10 @@ import org.lwjgl.input.Keyboard;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 
+/**
+ * Class used to create and register KeyBindings
+ * @author Majikguy
+ */
 public class KeybindHandler {
 
 	public static KeyBinding castingKeybind;

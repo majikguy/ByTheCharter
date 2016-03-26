@@ -11,23 +11,36 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 
+/**
+ * Class that handles anything that needs to be done on both the client and server
+ * ClientProxy and ServerProxy extend this class in order to handle things specific to their sides of the mod
+ * @author Majikguy
+ *
+ */
 public class CommonProxy {
 
 	public void preInit(FMLPreInitializationEvent e) {
-		
+		// Nothing so far
 	}
 	
 	public void init(FMLInitializationEvent e) {
+		// Register Common EventHandlers 
 		MinecraftForge.EVENT_BUS.register(new EventHandlerDeath());
 		
+		// Register NetworkHandlers
 		NetworkRegistry.INSTANCE.registerGuiHandler(CharterMod.instance, new CharterGUIHandler());
 	}
 	
 	public void postInit(FMLPostInitializationEvent e) {
-		
+		// Nothing so far
 	}
 	
-	public void generateCharterParticles(Entity entity) {
+	/**
+	 * Generates a Charter-Mark particle effect surrounding an Entity
+	 * Does not need to do anything on the Server, so it is empty in CommonProxy
+	 * @param entity - the Entity to spawn the particle around
+	 */
+	public void generateCharterParticle(Entity entity) {
 		// Does nothing here, only acts on the client
 	}
 	

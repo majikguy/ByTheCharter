@@ -4,6 +4,11 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.IGuiHandler;
 
+/**
+ * GUIHandler that makes sure the Client and the Server both get the correct versions of GUIs opened
+ * @author Majikguy
+ *
+ */
 public class CharterGUIHandler implements IGuiHandler {
 	
 	public static final int CASTING_GUI = 0;

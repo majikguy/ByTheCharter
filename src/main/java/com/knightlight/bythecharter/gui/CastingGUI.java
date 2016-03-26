@@ -6,6 +6,11 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.effect.EntityLightningBolt;
 
+/**
+ * Test GUI that opens a button
+ * @author Majikguy
+ *
+ */
 public class CastingGUI extends GuiScreen {
 	
 	private GuiButton a;

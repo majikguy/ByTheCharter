@@ -5,6 +5,10 @@ import net.minecraft.client.particle.EntityFX;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.world.World;
 
+/**
+ * A floating Charter Mark particle
+ * @author Majikguy
+ */
 public class EntityCharterParticleFX extends EntityFX {
 
 	protected EntityCharterParticleFX(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double xSpeedIn,
@@ -27,16 +31,20 @@ public class EntityCharterParticleFX extends EntityFX {
 		setParticleIcon(sprite);
 	}
 
+	// Makes sure that the particle does not get hidden behind other rendered objects
 	@Override
 	public int getFXLayer() {
 		return 1;
 	}
 
+	// Different than this.particleAlpha, not actually used to draw the particle.
+	// This is set to 1.0F to prevent water or other transparent objects from rendering in front of it
 	@Override
 	public float getAlpha() {
 		return 1.0F;
 	}
 
+	// Set to return the maximum brightness so that the marks are always glowing
 	@Override
 	public int getBrightnessForRender(float partialTick) {
 		final int FULL_BRIGHTNESS_VALUE = 0xf000f0;
