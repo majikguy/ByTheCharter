@@ -2,9 +2,10 @@ package com.knightlight.bythecharter.gui;
 
 import java.io.IOException;
 
+import com.knightlight.bythecharter.common.entity.EntityCharterSpellProjectile;
+
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.entity.effect.EntityLightningBolt;
 
 /**
  * Test GUI that opens a button
@@ -39,8 +40,8 @@ public class CastingGUI extends GuiScreen {
 			if(this.mc.currentScreen == null)
 				this.mc.setIngameFocus();
 			
-			EntityLightningBolt lightning = new EntityLightningBolt(mc.thePlayer.worldObj, mc.thePlayer.posX, mc.thePlayer.posY, mc.thePlayer.posZ);
-			mc.thePlayer.worldObj.addWeatherEffect(lightning);
+			EntityCharterSpellProjectile spell = new EntityCharterSpellProjectile(mc.thePlayer.worldObj, mc.thePlayer);
+			mc.thePlayer.worldObj.spawnEntityInWorld(spell);
 		}
 	}
 }
