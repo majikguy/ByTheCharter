@@ -50,7 +50,7 @@ public class ClientProxy extends CommonProxy {
 	 * @param entity - the Entity to spawn the particle around
 	 */
 	@Override
-	public void generateCharterParticle(Entity entity) {
+	public void generateCharterSpellParticle(Entity entity) {
 		
 		if(entity == null) return;
 		
@@ -66,6 +66,31 @@ public class ClientProxy extends CommonProxy {
 													motionX,
 													motionY,
 													motionZ);
+		Minecraft.getMinecraft().effectRenderer.addEffect(particle);
+	}
+	
+	/**
+	 * Generates a Charter-Mark particle effect surrounding an Entity
+	 * @param entity - the Entity to spawn the particle around
+	 */
+	@Override
+	public void generateLazyCharterParticle(Entity entity) {
+		
+		if(entity == null) return;
+		
+		double motionX = entity.motionX + entity.worldObj.rand.nextGaussian() + 0.02D;
+		double motionY = entity.motionY + entity.worldObj.rand.nextGaussian() + 0.02D;
+		double motionZ = entity.motionZ + entity.worldObj.rand.nextGaussian() + 0.02D;
+		
+		EntityCharterParticleFX particle = new EntityCharterParticleFX(
+													entity.worldObj,
+													entity.posX + entity.worldObj.rand.nextFloat() * entity.width * 2.0F - entity.width,
+													entity.posY + entity.worldObj.rand.nextFloat() * entity.height * 2.0F - entity.height,
+													entity.posZ + entity.worldObj.rand.nextFloat() * entity.width * 2.0F - entity.width,
+													motionX,
+													motionY,
+													motionZ,
+													true);
 		Minecraft.getMinecraft().effectRenderer.addEffect(particle);
 	}
 	

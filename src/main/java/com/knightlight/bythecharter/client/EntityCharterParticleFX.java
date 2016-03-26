@@ -11,8 +11,7 @@ import net.minecraft.world.World;
  */
 public class EntityCharterParticleFX extends EntityFX {
 
-	protected EntityCharterParticleFX(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double xSpeedIn,
-			double ySpeedIn, double speedIn) {
+	protected EntityCharterParticleFX(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double xSpeedIn, double ySpeedIn, double speedIn) {
 		super(worldIn, xCoordIn, yCoordIn, zCoordIn, xSpeedIn, ySpeedIn, speedIn);
 
 		this.particleAlpha = 0.3F;
@@ -21,14 +20,21 @@ public class EntityCharterParticleFX extends EntityFX {
 		this.particleBlue = 0.0F;
 		this.noClip = true;
 		this.particleScale *= this.rand.nextFloat() * 0.1F + 0.15F;
-		this.motionX *= 0.019999999552965164D;
-		this.motionY *= 0.019999999552965164D;
-		this.motionZ *= 0.019999999552965164D;
-		this.particleMaxAge = (int) (10.0D / (Math.random() * 0.4D + 0.1D));
 
 		TextureAtlasSprite sprite = Minecraft.getMinecraft().getTextureMapBlocks()
 				.getAtlasSprite("bythecharter:misc/mark" + (int) (Math.random() * 3));
 		setParticleIcon(sprite);
+	}
+	
+	protected EntityCharterParticleFX(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double xSpeedIn, double ySpeedIn, double speedIn, boolean lazy) {
+		this(worldIn, xCoordIn, yCoordIn, zCoordIn, xSpeedIn, ySpeedIn, speedIn);
+
+		if(lazy) {
+			this.motionX *= 0.019999999552965164D;
+			this.motionY *= 0.019999999552965164D;
+			this.motionZ *= 0.019999999552965164D;
+			this.particleMaxAge = (int) (10.0D / (Math.random() * 0.4D + 0.1D));
+		}
 	}
 
 	// Makes sure that the particle does not get hidden behind other rendered objects

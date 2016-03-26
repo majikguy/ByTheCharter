@@ -1,9 +1,11 @@
 package com.knightlight.bythecharter.common;
 
+import com.knightlight.bythecharter.client.EntityCharterParticleFX;
 import com.knightlight.bythecharter.common.entity.EntityCharterSpellProjectile;
 import com.knightlight.bythecharter.events.EventHandlerDeath;
 import com.knightlight.bythecharter.gui.CharterGUIHandler;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.MinecraftForge;
@@ -44,8 +46,15 @@ public class CommonProxy {
 	 * Does not need to do anything on the Server, so it is empty in CommonProxy
 	 * @param entity - the Entity to spawn the particle around
 	 */
-	public void generateCharterParticle(Entity entity) {
+	public void generateCharterSpellParticle(Entity entity) {
 		// Does nothing here, only acts on the client
+	}
+	
+	/**
+	 * Generates a slow-moving Charter-Mark particle effect surrounding an Entity
+	 * @param entity - the Entity to spawn the particle around
+	 */
+	public void generateLazyCharterParticle(Entity entity) {
 	}
 	
 	/**

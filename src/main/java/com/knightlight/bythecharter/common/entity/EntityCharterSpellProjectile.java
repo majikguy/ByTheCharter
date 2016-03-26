@@ -27,7 +27,7 @@ public class EntityCharterSpellProjectile extends EntityThrowable {
 	public void onUpdate() {
 		super.onUpdate();
 		for(int i = 0; i < 20; i++)
-			CharterMod.proxy.generateCharterParticle(this);
+			CharterMod.proxy.generateCharterSpellParticle(this);
 	}
 	
 	@Override
