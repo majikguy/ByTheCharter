@@ -1,11 +1,12 @@
 package com.knightlight.bythecharter.client;
 
 import com.knightlight.bythecharter.client.events.ClientTickHandler;
+import com.knightlight.bythecharter.client.events.EventHandlerKeyInput;
 import com.knightlight.bythecharter.client.events.EventHandlerTextureStitch;
 import com.knightlight.bythecharter.common.CommonProxy;
-import com.knightlight.bythecharter.events.EventHandlerKeyInput;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.particle.Particle;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.MinecraftForge;
@@ -54,15 +55,15 @@ public class ClientProxy extends CommonProxy {
 		
 		if(entity == null) return;
 		
-		double motionX = entity.motionX + entity.worldObj.rand.nextGaussian() + 0.02D;
-		double motionY = entity.motionY + entity.worldObj.rand.nextGaussian() + 0.02D;
-		double motionZ = entity.motionZ + entity.worldObj.rand.nextGaussian() + 0.02D;
+		double motionX = entity.motionX + entity.world.rand.nextGaussian() + 0.02D;
+		double motionY = entity.motionY + entity.world.rand.nextGaussian() + 0.02D;
+		double motionZ = entity.motionZ + entity.world.rand.nextGaussian() + 0.02D;
 		
-		EntityCharterParticleFX particle = new EntityCharterParticleFX(
-													entity.worldObj,
-													entity.posX + entity.worldObj.rand.nextFloat() * entity.width * 2.0F - entity.width,
-													entity.posY + entity.worldObj.rand.nextFloat() * entity.height * 2.0F - entity.height,
-													entity.posZ + entity.worldObj.rand.nextFloat() * entity.width * 2.0F - entity.width,
+		Particle particle = new EntityCharterParticleFX(
+													entity.world,
+													entity.posX + entity.world.rand.nextFloat() * entity.width * 2.0F - entity.width,
+													entity.posY + entity.world.rand.nextFloat() * entity.height * 2.0F - entity.height,
+													entity.posZ + entity.world.rand.nextFloat() * entity.width * 2.0F - entity.width,
 													motionX,
 													motionY,
 													motionZ);
@@ -75,7 +76,7 @@ public class ClientProxy extends CommonProxy {
 	 */
 	@Override
 	public EntityPlayer getClientPlayer() {
-		return Minecraft.getMinecraft().thePlayer;
+		return Minecraft.getMinecraft().player;
 	}
 
 }

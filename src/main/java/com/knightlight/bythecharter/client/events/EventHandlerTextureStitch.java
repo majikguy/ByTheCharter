@@ -19,7 +19,7 @@ public class EventHandlerTextureStitch {
 		// Should find a better way to do this
 		for(int i = 0; i < 3; i++) {
 			charterMarks = new ResourceLocation("bythecharter:misc/mark"+i);
-			event.map.registerSprite(charterMarks);
+			event.getMap().registerSprite(charterMarks);
 		}
 	}
 }

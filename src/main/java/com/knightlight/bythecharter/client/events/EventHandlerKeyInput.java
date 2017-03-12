@@ -1,7 +1,6 @@
-package com.knightlight.bythecharter.events;
+package com.knightlight.bythecharter.client.events;
 
 import com.knightlight.bythecharter.client.KeybindHandler;
-import com.knightlight.bythecharter.gui.CastingGUI;
 
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -19,7 +18,8 @@ public class EventHandlerKeyInput {
 		
 		if(KeybindHandler.castingKeybind.isPressed()) {
 			Minecraft mc = Minecraft.getMinecraft();
-			mc.displayGuiScreen(new CastingGUI());
+			// Not doing a GUI like this, will be doing a custom-rendered solution eventually
+			//mc.displayGuiScreen(new CastingGUI());
 		}
 	}
 }

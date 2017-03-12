@@ -1,7 +1,6 @@
 package com.knightlight.bythecharter.common;
 
-import com.knightlight.bythecharter.events.EventHandlerDeath;
-import com.knightlight.bythecharter.gui.CharterGUIHandler;
+import com.knightlight.bythecharter.common.events.EventHandlerDeath;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -9,7 +8,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 /**
  * Class that handles anything that needs to be done on both the client and server
@@ -26,9 +24,6 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent e) {
 		// Register Common EventHandlers 
 		MinecraftForge.EVENT_BUS.register(new EventHandlerDeath());
-		
-		// Register NetworkHandlers
-		NetworkRegistry.INSTANCE.registerGuiHandler(CharterMod.instance, new CharterGUIHandler());
 	}
 	
 	public void postInit(FMLPostInitializationEvent e) {

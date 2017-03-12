@@ -1,4 +1,4 @@
-package com.knightlight.bythecharter.events;
+package com.knightlight.bythecharter.common.events;
 
 import org.apache.logging.log4j.Level;
 
@@ -17,6 +17,6 @@ public class EventHandlerDeath {
 	@SubscribeEvent
 	public void onLivingDeathEvent(LivingDeathEvent e)
     {
-		FMLLog.log("ByTheCharter",Level.INFO, "Entity with ID "+e.entity.getEntityId()+" died");
+		FMLLog.log("ByTheCharter",Level.INFO, "Entity with ID "+e.getEntity().getEntityId()+" died");
     }
 }

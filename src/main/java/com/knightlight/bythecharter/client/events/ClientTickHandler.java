@@ -11,7 +11,7 @@ public class ClientTickHandler {
 	
 	@SubscribeEvent
 	public void onClientTickEvent(ClientTickEvent e) {
-//		CharterMod.proxy.generateCharterParticles(CharterMod.proxy.getClientPlayer());
-//		CharterMod.proxy.generateCharterParticles(CharterMod.proxy.getClientPlayer());
+//		CharterMod.proxy.generateCharterParticle(CharterMod.proxy.getClientPlayer());
+//		CharterMod.proxy.generateCharterParticle(CharterMod.proxy.getClientPlayer());
 	}
 }

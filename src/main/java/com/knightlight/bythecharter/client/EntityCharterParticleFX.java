@@ -1,7 +1,7 @@
 package com.knightlight.bythecharter.client;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.particle.EntityFX;
+import net.minecraft.client.particle.Particle;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.world.World;
 
@@ -9,7 +9,7 @@ import net.minecraft.world.World;
  * A floating Charter Mark particle
  * @author Majikguy
  */
-public class EntityCharterParticleFX extends EntityFX {
+public class EntityCharterParticleFX extends Particle {
 
 	protected EntityCharterParticleFX(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double xSpeedIn,
 			double ySpeedIn, double speedIn) {
@@ -19,7 +19,7 @@ public class EntityCharterParticleFX extends EntityFX {
 		this.particleRed = 1.0F;
 		this.particleGreen = 1.0F;
 		this.particleBlue = 0.0F;
-		this.noClip = true;
+		this.canCollide = false;
 		this.particleScale *= this.rand.nextFloat() * 0.1F + 0.15F;
 		this.motionX *= 0.019999999552965164D;
 		this.motionY *= 0.019999999552965164D;
@@ -28,7 +28,7 @@ public class EntityCharterParticleFX extends EntityFX {
 
 		TextureAtlasSprite sprite = Minecraft.getMinecraft().getTextureMapBlocks()
 				.getAtlasSprite("bythecharter:misc/mark" + (int) (Math.random() * 3));
-		setParticleIcon(sprite);
+		setParticleTexture(sprite);
 	}
 
 	// Makes sure that the particle does not get hidden behind other rendered objects
@@ -36,13 +36,13 @@ public class EntityCharterParticleFX extends EntityFX {
 	public int getFXLayer() {
 		return 1;
 	}
-
-	// Different than this.particleAlpha, not actually used to draw the particle.
-	// This is set to 1.0F to prevent water or other transparent objects from rendering in front of it
-	@Override
-	public float getAlpha() {
-		return 1.0F;
-	}
+//
+//	// Different than this.particleAlpha, not actually used to draw the particle.
+//	// This is set to 1.0F to prevent water or other transparent objects from rendering in front of it
+//	@Override
+//	public float getAlpha() {
+//		return 1.0F;
+//	}
 
 	// Set to return the maximum brightness so that the marks are always glowing
 	@Override
