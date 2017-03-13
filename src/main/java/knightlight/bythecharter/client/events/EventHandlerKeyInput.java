@@ -1,7 +1,6 @@
-package com.knightlight.bythecharter.client.events;
+package knightlight.bythecharter.client.events;
 
-import com.knightlight.bythecharter.client.KeybindHandler;
-
+import knightlight.bythecharter.client.KeybindHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;

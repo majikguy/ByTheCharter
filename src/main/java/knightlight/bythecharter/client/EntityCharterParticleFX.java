@@ -1,4 +1,4 @@
-package com.knightlight.bythecharter.client;
+package knightlight.bythecharter.client;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.Particle;

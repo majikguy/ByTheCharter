@@ -1,4 +1,4 @@
-package com.knightlight.bythecharter.client;
+package knightlight.bythecharter.client;
 
 import org.lwjgl.input.Keyboard;
 

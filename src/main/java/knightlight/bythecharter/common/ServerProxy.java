@@ -1,4 +1,4 @@
-package com.knightlight.bythecharter.common;
+package knightlight.bythecharter.common;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;

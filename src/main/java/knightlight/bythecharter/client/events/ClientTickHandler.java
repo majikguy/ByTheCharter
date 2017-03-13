@@ -1,4 +1,4 @@
-package com.knightlight.bythecharter.client.events;
+package knightlight.bythecharter.client.events;
 
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;

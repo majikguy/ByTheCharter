@@ -1,4 +1,4 @@
-package com.knightlight.bythecharter.client.events;
+package knightlight.bythecharter.client.events;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.TextureStitchEvent;

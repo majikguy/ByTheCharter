@@ -1,7 +1,6 @@
-package com.knightlight.bythecharter.common;
+package knightlight.bythecharter.common;
 
-import com.knightlight.bythecharter.common.events.EventHandlerDeath;
-
+import knightlight.bythecharter.common.events.EventHandlerDeath;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.MinecraftForge;

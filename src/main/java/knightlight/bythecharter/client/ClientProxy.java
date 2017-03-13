@@ -1,10 +1,9 @@
-package com.knightlight.bythecharter.client;
+package knightlight.bythecharter.client;
 
-import com.knightlight.bythecharter.client.events.ClientTickHandler;
-import com.knightlight.bythecharter.client.events.EventHandlerKeyInput;
-import com.knightlight.bythecharter.client.events.EventHandlerTextureStitch;
-import com.knightlight.bythecharter.common.CommonProxy;
-
+import knightlight.bythecharter.client.events.ClientTickHandler;
+import knightlight.bythecharter.client.events.EventHandlerKeyInput;
+import knightlight.bythecharter.client.events.EventHandlerTextureStitch;
+import knightlight.bythecharter.common.CommonProxy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.entity.Entity;

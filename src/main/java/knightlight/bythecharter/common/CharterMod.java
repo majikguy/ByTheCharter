@@ -1,4 +1,4 @@
-package com.knightlight.bythecharter.common;
+package knightlight.bythecharter.common;
 
 import org.apache.logging.log4j.Level;
 
