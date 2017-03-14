@@ -27,7 +27,7 @@ public class EntityCharterParticleFX extends Particle {
 		this.particleMaxAge = (int) (10.0D / (Math.random() * 0.4D + 0.1D));
 
 		TextureAtlasSprite sprite = Minecraft.getMinecraft().getTextureMapBlocks()
-				.getAtlasSprite("bythecharter:misc/mark" + (int) (Math.random() * 3));
+				.getAtlasSprite("bythecharter:misc/mark" + (int) (Math.random() * 80));
 		setParticleTexture(sprite);
 	}
 

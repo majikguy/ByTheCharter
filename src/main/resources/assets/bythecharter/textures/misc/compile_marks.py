@@ -24,20 +24,20 @@ for bg_file in parts_bg:
     #Simplest type of mark is bg + fg, so we get all of those done first
     for fg_file in parts_fg:
         fg = Image.open(fg_file)
-        marksMade += 1
         Image.alpha_composite(bg,fg).save("mark" + str(marksMade) + ".png")
+        marksMade += 1
 
     #Marks can be bg + in with nothing else, these are done here
     for in_file in parts_in:
         inn = Image.open(in_file)
-        marksMade += 1
         Image.alpha_composite(bg,inn).save("mark" + str(marksMade) + ".png")
+        marksMade += 1
 
     #Marks can be bg + out with nothing else, these are done here
     for out_file in parts_out:
         out = Image.open(out_file)
-        marksMade += 1
         Image.alpha_composite(bg,out).save("mark" + str(marksMade) + ".png")
+        marksMade += 1
 
     #Build all of the combinations of inner and outer parts for this bg
     for in_file in parts_in:
@@ -45,5 +45,5 @@ for bg_file in parts_bg:
         bg_in = Image.alpha_composite(bg,inn)
         for out_file in parts_out:
             out = Image.open(out_file)
-            marksMade += 1
             Image.alpha_composite(bg_in, out).save("mark" + str(marksMade) +".png")
+            marksMade += 1

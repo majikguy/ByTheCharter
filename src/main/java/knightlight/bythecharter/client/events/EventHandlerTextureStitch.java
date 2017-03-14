@@ -17,7 +17,7 @@ public class EventHandlerTextureStitch {
 		ResourceLocation charterMarks;
 		// Load each of the mark#.png files
 		// Should find a better way to do this
-		for(int i = 0; i < 3; i++) {
+		for(int i = 0; i < 50; i++) {
 			charterMarks = new ResourceLocation("bythecharter:misc/mark"+i);
 			event.getMap().registerSprite(charterMarks);
 		}
