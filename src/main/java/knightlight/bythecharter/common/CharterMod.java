@@ -30,7 +30,7 @@ public class CharterMod
     public static CharterMod instance = new CharterMod();
     
     // Proxy object, handles loading of the mod. Contains ClientProxy on the client, and ServerProxy on the server
-    @SidedProxy(clientSide="com.knightlight.bythecharter.client.ClientProxy",serverSide="com.knightlight.bythecharter.ServerProxy")
+    @SidedProxy(clientSide="knightlight.bythecharter.client.ClientProxy",serverSide="knightlight.bythecharter.ServerProxy")
     public static CommonProxy proxy;
     
     // Setup methods, hands the reigns off to the Proxy
