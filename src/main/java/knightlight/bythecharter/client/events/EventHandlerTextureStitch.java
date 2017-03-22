@@ -1,5 +1,6 @@
 package knightlight.bythecharter.client.events;
 
+import knightlight.bythecharter.common.lib.CharterLib;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -16,8 +17,8 @@ public class EventHandlerTextureStitch {
 		
 		ResourceLocation charterMarks;
 		// Load each of the mark#.png files
-		// Should find a better way to do this
-		for(int i = 0; i < 50; i++) {
+		// Should find a better way to do this, probably should pre-compile them into a single spritesheet since eventually loading hundreds of sprites is... not good.
+		for(int i = 0; i < CharterLib.markCount; i++) {
 			charterMarks = new ResourceLocation("bythecharter:misc/mark"+i);
 			event.getMap().registerSprite(charterMarks);
 		}

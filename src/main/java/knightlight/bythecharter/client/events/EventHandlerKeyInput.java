@@ -1,6 +1,7 @@
 package knightlight.bythecharter.client.events;
 
 import knightlight.bythecharter.client.KeybindHandler;
+import knightlight.bythecharter.client.gui.MagicDiveGUI;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
@@ -17,8 +18,8 @@ public class EventHandlerKeyInput {
 		
 		if(KeybindHandler.castingKeybind.isPressed()) {
 			Minecraft mc = Minecraft.getMinecraft();
-			// Not doing a GUI like this, will be doing a custom-rendered solution eventually
-			//mc.displayGuiScreen(new CastingGUI());
+			// @TODO Keep experimenting with different options for GUI bases
+			mc.displayGuiScreen(new MagicDiveGUI());
 		}
 	}
 }

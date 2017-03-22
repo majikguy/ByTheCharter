@@ -3,6 +3,7 @@ package knightlight.bythecharter.client;
 import knightlight.bythecharter.client.events.ClientTickHandler;
 import knightlight.bythecharter.client.events.EventHandlerKeyInput;
 import knightlight.bythecharter.client.events.EventHandlerTextureStitch;
+import knightlight.bythecharter.client.fx.EntityCharterParticleFX;
 import knightlight.bythecharter.common.CommonProxy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.Particle;

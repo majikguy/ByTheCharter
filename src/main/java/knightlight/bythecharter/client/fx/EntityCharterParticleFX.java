@@ -1,5 +1,6 @@
-package knightlight.bythecharter.client;
+package knightlight.bythecharter.client.fx;
 
+import knightlight.bythecharter.common.lib.CharterLib;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
@@ -11,7 +12,7 @@ import net.minecraft.world.World;
  */
 public class EntityCharterParticleFX extends Particle {
 
-	protected EntityCharterParticleFX(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double xSpeedIn,
+	public EntityCharterParticleFX(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double xSpeedIn,
 			double ySpeedIn, double speedIn) {
 		super(worldIn, xCoordIn, yCoordIn, zCoordIn, xSpeedIn, ySpeedIn, speedIn);
 
@@ -20,14 +21,14 @@ public class EntityCharterParticleFX extends Particle {
 		this.particleGreen = 1.0F;
 		this.particleBlue = 0.0F;
 		this.canCollide = false;
-		this.particleScale *= this.rand.nextFloat() * 0.1F + 0.15F;
+		this.particleScale *= this.rand.nextFloat() * 0.05F + 0.15F;
 		this.motionX *= 0.019999999552965164D;
 		this.motionY *= 0.019999999552965164D;
 		this.motionZ *= 0.019999999552965164D;
 		this.particleMaxAge = (int) (10.0D / (Math.random() * 0.4D + 0.1D));
 
 		TextureAtlasSprite sprite = Minecraft.getMinecraft().getTextureMapBlocks()
-				.getAtlasSprite("bythecharter:misc/mark" + (int) (Math.random() * 80));
+				.getAtlasSprite("bythecharter:misc/mark" + (int) (Math.random() * CharterLib.markCount));
 		setParticleTexture(sprite);
 	}
 
