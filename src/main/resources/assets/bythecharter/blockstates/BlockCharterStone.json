@@ -1,0 +1,8 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cube-all",
+    "textures": { },
+    "transform": "forge:default-block"
+  }
+}

@@ -1,5 +1,6 @@
 package knightlight.bythecharter.common.events;
 
+import knightlight.bythecharter.common.CharterMod;
 import org.apache.logging.log4j.Level;
 
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
@@ -17,6 +18,6 @@ public class EventHandlerDeath {
 	@SubscribeEvent
 	public void onLivingDeathEvent(LivingDeathEvent e)
     {
-		FMLLog.log("ByTheCharter",Level.INFO, "Entity with ID "+e.getEntity().getEntityId()+" died");
+		CharterMod.logger.debug("Entity with ID "+e.getEntity().getEntityId()+" died");
     }
 }
